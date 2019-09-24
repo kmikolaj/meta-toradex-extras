@@ -1,0 +1,76 @@
+OpenEmbedded/Yocto Software Layer for Toradex Demo Images
+=========================================================
+
+This layer provides recipes used for demo images targeting ARM based Toradex
+computer on modules (COM) featuring NVIDIA Tegra, NXP Vybrid and NXP i.MX SoCs.
+For more information on available Toradex COMs please visit:
+
+https://www.toradex.com/computer-on-modules
+
+
+Dependencies
+============
+
+This layer depends on the relevant BSP layers for your machine and:
+
+  URI: git://git.openembedded.org/bitbake
+  branch: 1.36
+  revision: HEAD
+
+  URI: git://git.openembedded.org/openembedded-core
+  layer: meta
+  branch: rocko
+  revision: HEAD
+
+  URI: git://git.openembedded.org/meta-openembedded
+  layers:
+    meta-gnome
+    meta-multimedia
+    meta-networking
+    meta-oe
+  branch: rocko
+  revision: HEAD
+
+  URI: https://github.com/angstrom-distribution/meta-angstrom.git
+  branch: angstrom-v2017.12-rocko
+  revision: HEAD
+
+  URI: git://git.toradex.com/meta-lxde.git
+  branch: rocko
+  revision: HEAD
+
+  URI: git://git.yoctoproject.org/meta-qt4
+  branch: rocko
+  revision: HEAD
+
+  URI: https://github.com/meta-qt5/meta-qt5
+  branch: rocko
+  revision: HEAD
+
+  URI: git://git.toradex.com/meta-toradex-demos
+  branch: rocko
+  revision: HEAD
+
+  URI: git://git.toradex.com/meta-toradex-tegra
+  branch: rocko
+  revision: HEAD
+
+I. Building the meta-toradex-extras Layer
+========================================
+
+For information on how to use the modules with Linux and instructions on how
+to build the angstrom based demo images please visit:
+http://developer.toradex.com/software/linux
+http://developer.toradex.com/knowledge-base/board-support-package/openembedded-(core)
+
+For support, visit the Toradex Developer Community:
+https://www.toradex.com/community
+
+License
+=======
+
+All metadata is MIT licensed unless otherwise stated. Source code and
+binaries included in tree for individual recipes is under the LICENSE
+stated in each recipe (.bb file) unless otherwise stated.
+
+This README document is Copyright (C) 2016 Toradex AG.
