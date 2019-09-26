@@ -272,3 +272,6 @@ IMAGE_INITSCRIPTS   = " "
 IMAGE_LOGIN_MANAGER = "busybox shadow"
 
 inherit core-image
+
+# customize toolchain name
+TOOLCHAIN_OUTPUTNAME = "${SDK_NAME}-toolchain-qt5-t20-${DISTRO_VERSION}"
