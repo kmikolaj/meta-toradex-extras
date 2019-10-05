@@ -126,11 +126,13 @@ GSTREAMER_tegra = " \
     gst-plugins-good-matroska \
     gst-plugins-good-rtp \
     gst-plugins-good-rtpmanager \
+    gst-plugins-good-rtsp \
     gst-plugins-good-udp \
     gst-plugins-good-video4linux2 \
     gst-plugins-good-wavenc \
     gst-plugins-good-wavparse \
     gst-plugins-ugly-asf \
+    gst-plugins-ugly-mad \
 "
 GSTREAMER_append_tegra3 = " \
     gst-plugins-good-jpeg \
@@ -180,6 +182,10 @@ IMAGE_INSTALL_QT5 = " \
     packagegroup-qt5 \
     liberation-fonts \
     qtsmarthome \
+    qtserialport \
+    qtx11extras \
+    qtxmlpatterns \
+    qtimageformats-plugins \
     x-window-simple-app \
 "
 
@@ -211,9 +217,67 @@ IMAGE_INSTALL_append_mx6dl = "${IMAGE_INSTALL_MX6QDL}"
 # Packages which might no longer exist
 RRECOMMENDS_${PN} += "xserver-xorg-multimedia-modules"
 
-UTILS += " \
+IMAGE_INSTALL_UTILS = " \
+    vim \
+    vim-syntax \
+    vim-vimrc \
+    tcpdump \
+    lighttpd \
+    lighttpd-module-cgi \
+    lighttpd-module-fastcgi \
+    lighttpd-module-auth \
+    lighttpd-module-dirlisting \
+    lighttpd-module-access \
+    lighttpd-module-setenv \
+    samba \
+    cifs-utils \
+    \
+    vsftpd \
     mc \
+    mc-helpers \
+    tzdata-posix \
     x11vnc \
+    freerdp \
+    rsync \
+    ntfs-3g \
+    ntfsprogs \
+    tftp-hpa \
+    tftp-hpa-server \
+    nano \
+    socat \
+    canutils \
+    iproute2 \
+    picocom \
+    xz \
+    zip \
+    ppp \
+"
+
+IMAGE_INSTALL_SUPPORT = " \
+    libmad \
+    speex \
+    libopus \
+    libsamplerate0 \
+    glibc-gconv-cp1250 \
+    glibc-gconv-ibm852 \
+    glibc-gconv-iso8859-2 \
+    glibc-gconv-unicode \
+    net-snmp-libs \
+    net-snmp-mibs \
+    libxcb-dpms \
+    gsoap \
+    cpprest \
+    podofo \
+"
+
+IMAGE_INSTALL_FONTS = " \
+    ttf-dejavu-sans \
+    ttf-dejavu-sans-mono \
+    ttf-dejavu-serif \
+"
+
+IMAGE_INSTALL_DEV = " \
+    nodejs \
 "
 
 IMAGE_INSTALL += " \
@@ -261,7 +325,11 @@ IMAGE_INSTALL += " \
     libpcreposix \
     libxcomposite \
     alsa-states \
-    ${UTILS} \
+    \
+    ${IMAGE_INSTALL_UTILS} \
+    ${IMAGE_INSTALL_FONTS} \
+    ${IMAGE_INSTALL_SUPPORT} \
+    ${IMAGE_INSTALL_DEV} \
 "
 
 require recipes-images/images/tdx-extra.inc
