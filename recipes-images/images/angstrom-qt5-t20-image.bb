@@ -229,8 +229,6 @@ IMAGE_INSTALL_UTILS = " \
     lighttpd-module-dirlisting \
     lighttpd-module-access \
     lighttpd-module-setenv \
-    samba \
-    cifs-utils \
     \
     vsftpd \
     mc \
