@@ -241,6 +241,7 @@ IMAGE_INSTALL_UTILS = " \
     rsync \
     ntfs-3g \
     ntfsprogs \
+    dnsmasq \
     tftp-hpa \
     tftp-hpa-server \
     nano \
